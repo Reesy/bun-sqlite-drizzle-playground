@@ -2,6 +2,11 @@
   "name": "bun-sqlite-drizzle-playground",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "db:generate": "bun drizzle-kit generate",
+    "db:migrate": "bun drizzle-kit migrate",
+    "dev": "bun run src/index.ts"
+  },
   "devDependencies": {
     "@types/bun": "^1.1.13",
     "drizzle-kit": "^0.28.0"
@@ -10,6 +15,7 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@libsql/client": "^0.14.0",
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.36.1"
   }
